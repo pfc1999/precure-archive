@@ -1,5 +1,6 @@
 title: "Precure资料索引库"
 description: "光之美少女系列资料整理与索引"
+
 baseurl: "/precure-archive"
 url: "https://pfc1999.github.io"
 
@@ -17,5 +18,7 @@ defaults:
     values:
       layout: "default"
 
+
 include:
   - assets
+
