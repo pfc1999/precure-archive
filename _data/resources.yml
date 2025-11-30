@@ -11,7 +11,7 @@
 
 - id: "resource_002" 
   title: "プリキュア映画版設定資料集"
-  series: ["futari_wa", "yes_precure_5"]
+  series: ["futari_wa", "max_heart", "splash_star", "yes_precure_5", "yes_gogo", "fresh", "heartcatch", "suite", "smile", "dokidoki", "happiness_charge", "go_princess", "maho_girls", "kirakira", "hugtto", "star_twinkle", "healin_good", "tropical_rouge", "delicious_party", "hirogaru_sky", "wonderful", "you_and_idol", "detective"]
   type: "artbook"
   source: "東映アニメーション"
   publish_date: "2022-12-10"

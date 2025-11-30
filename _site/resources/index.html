@@ -143,14 +143,134 @@
     <select id="series-filter">
         <option value="">所有系列</option>
         
-        <option value="futari_wa">ふたりはプリキュア</option>
         
-        <option value="yes_precure_5">Yes! プリキュア5</option>
         
-        <option value="heartcatch">ハートキャッチプリキュア!</option>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+          
+          
+          
+          <option value="futari_wa">ふたりはプリキュア</option>
+        
+          
+          
+          
+          <option value="max_heart">ふたりはプリキュア Max Heart</option>
+        
+          
+          
+          
+          <option value="splash_star">ふたりはプリキュア Splash Star</option>
+        
+          
+          
+          
+          <option value="yes_precure_5">Yes! プリキュア5</option>
+        
+          
+          
+          
+          <option value="yes_gogo">Yes! プリキュア5 GoGo!</option>
+        
+          
+          
+          
+          <option value="fresh">フレッシュプリキュア!</option>
+        
+          
+          
+          
+          <option value="heartcatch">ハートキャッチプリキュア!</option>
+        
+          
+          
+          
+          <option value="suite">スイートプリキュア♪</option>
+        
+          
+          
+          
+          <option value="smile">スマイルプリキュア!</option>
+        
+          
+          
+          
+          <option value="dokidoki">ドキドキ! プリキュア</option>
+        
+          
+          
+          
+          <option value="happiness_charge">ハピネスチャージプリキュア!</option>
+        
+          
+          
+          
+          <option value="go_princess">Go! プリンセスプリキュア</option>
+        
+          
+          
+          
+          <option value="maho_girls">魔法つかいプリキュア!</option>
+        
+          
+          
+          
+          <option value="kirakira">キラキラ☆プリキュアアラモード</option>
+        
+          
+          
+          
+          <option value="hugtto">HUGっと! プリキュア</option>
+        
+          
+          
+          
+          <option value="star_twinkle">スター☆トゥインクルプリキュア</option>
+        
+          
+          
+          
+          <option value="healin_good">ヒーリングっど♥プリキュア</option>
+        
+          
+          
+          
+          <option value="tropical_rouge">トロピカル〜ジュ! プリキュア</option>
+        
+          
+          
+          
+          <option value="delicious_party">デリシャスパーティ♡プリキュア</option>
+        
+          
+          
+          
+          <option value="hirogaru_sky">ひろがるスカイ! プリキュア</option>
+        
+          
+          
+          
+          <option value="wonderful">わんだふるぷりきゅあ!</option>
+        
+          
+          
+          
+          <option value="you_and_idol">キミとアイドルプリキュア♪</option>
+        
+          
+          
+          
+          <option value="detective">名探偵プリキュア！</option>
         
     </select>
-
     <select id="type-filter">
         <option value="">所有类型</option>
         <option value="interview">访谈</option>
@@ -162,24 +282,28 @@
 <!-- 资料列表 -->
 <div id="resource-list">
 
-<div class="resource-item" data-series="yes_precure_5" data-type="interview">
-    <h3>「Yes! プリキュア5」夢原のぞみ役・三瓶由布子さんインタビュー</h3>
-    <p><strong>来源:</strong> アニメイトタイムズ | <strong>日期:</strong> 2023-05-15</p>
-    
-    <p>三瓶由布子さんが夢原のぞみ役としての思い出を語る</p>
-    
-    <a href="https://www.animatetimes.com/news/details.php?id=1684112400" target="_blank" class="btn">查看原文</a>
+<div class="resource-container" data-series="yes_precure_5" data-type="interview">
+    <div class="resource-item">
+        <h3>「Yes! プリキュア5」夢原のぞみ役・三瓶由布子さんインタビュー</h3>
+        <p><strong>来源:</strong> アニメイトタイムズ | <strong>日期:</strong> 2023-05-15</p>
+        
+        <p>三瓶由布子さんが夢原のぞみ役としての思い出を語る</p>
+        
+        <a href="https://www.animatetimes.com/news/details.php?id=1684112400" target="_blank" class="btn">查看原文</a>
+    </div>
     <hr />
 </div>
 
-<div class="resource-item" data-series="futari_wa" data-type="artbook">
-    <h3>プリキュア映画版設定資料集</h3>
-    <p><strong>来源:</strong> 東映アニメーション | <strong>日期:</strong> 2022-12-10</p>
+<div class="resource-container" data-series="futari_wa,max_heart,splash_star,yes_precure_5,yes_gogo,fresh,heartcatch,suite,smile,dokidoki,happiness_charge,go_princess,maho_girls,kirakira,hugtto,star_twinkle,healin_good,tropical_rouge,delicious_party,hirogaru_sky,wonderful,you_and_idol,detective" data-type="artbook">
+    <div class="resource-item">
+        <h3>プリキュア映画版設定資料集</h3>
+        <p><strong>来源:</strong> 東映アニメーション | <strong>日期:</strong> 2022-12-10</p>
+        
+        <p>劇場版プリキュアの設定画やコンセプトアートを収録</p>
+        
+        <a href="https://www.toei-anim.co.jp/" target="_blank" class="btn">查看原文</a>
+    </div>
     
-    <p>劇場版プリキュアの設定画やコンセプトアートを収録</p>
-    
-    <a href="https://www.toei-anim.co.jp/" target="_blank" class="btn">查看原文</a>
-    <hr />
 </div>
 
 </div>
@@ -193,13 +317,33 @@ document.addEventListener('DOMContentLoaded', function() {
     function filterResources() {
         const seriesValue = seriesFilter.value;
         const typeValue = typeFilter.value;
-        const items = document.querySelectorAll('.resource-item');
+        const containers = document.querySelectorAll('.resource-container');
+        let visibleCount = 0;
         
-        items.forEach(item => {
-            const seriesMatch = !seriesValue || item.dataset.series === seriesValue;
-            const typeMatch = !typeValue || item.dataset.type === typeValue;
+        containers.forEach(container => {
+            const seriesData = container.dataset.series.split(',');
+            const typeMatch = !typeValue || container.dataset.type === typeValue;
+            const seriesMatch = !seriesValue || seriesData.includes(seriesValue);
             
-            item.style.display = seriesMatch && typeMatch ? 'block' : 'none';
+            const isVisible = seriesMatch && typeMatch;
+            
+            container.style.display = isVisible ? 'block' : 'none';
+            
+            if (isVisible) {
+                visibleCount++;
+            }
+        });
+        
+        // 隐藏最后一个容器的分隔线
+        const visibleContainers = Array.from(containers).filter(container => 
+            container.style.display !== 'none'
+        );
+        
+        visibleContainers.forEach((container, index) => {
+            const hr = container.querySelector('hr');
+            if (hr) {
+                hr.style.display = index === visibleContainers.length - 1 ? 'none' : 'block';
+            }
         });
     }
     
