@@ -13,6 +13,7 @@ logo_hugttoprecure.png
 logo_kirakiraprecurealamode.png
 logo_mohotsukaiprecure.png
 logo_suiteprecure.png
+logo_stardetective.png
 logo_startwinkleprecure.png
 logo_sweetprecure.png
 logo_tropicarougeprecure.png
