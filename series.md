@@ -10,7 +10,7 @@ permalink: /series/  # 确保有斜杠
 <div class="series-card">
     <h2>{{ series.title }} ({{ series.year }})</h2>
     <p>{{ series.description }}</p>
-    <a href="/resources/?series={{ series.id }}">查看相关资料</a>
+    <a href="{{ site.baseurl }}/resources/?series={{ series.id }}">查看相关资料</a>
 </div>
 <hr>
 {% endfor %}

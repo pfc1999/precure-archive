@@ -8,9 +8,9 @@ title: "Precure资料索引库"
 欢迎来到光之美少女资料整理站！
 
 ## 快速导航
-- [系列总览](/series/)
-- [资料库](/resources/)
-- [时间线](/timeline/)
+- [系列总览]({{ site.baseurl }}/series/)
+- [资料库]({{ site.baseurl }}/resources/)
+- [时间线]({{ site.baseurl }}/timeline/)
 
 ## 最新更新
 {% for resource in site.data.resources limit:5 %}

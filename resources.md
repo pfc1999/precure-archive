@@ -10,11 +10,17 @@ permalink: /resources/  # 确保有斜杠
 <div class="filters">
     <select id="series-filter">
         <option value="">所有系列</option>
-        {% for series in site.data.series %}
-        <option value="{{ series.id }}">{{ series.title }}</option>
+        {% assign all_series = "" | split: "" %}
+        {% for resource in site.data.resources %}
+          {% for series_item in resource.series %}
+            {% assign all_series = all_series | push: series_item %}
+          {% endfor %}
+        {% endfor %}
+        {% assign unique_series = all_series | uniq | sort %}
+        {% for series in unique_series %}
+        <option value="{{ series }}">{{ series }}</option>
         {% endfor %}
     </select>
-
     <select id="type-filter">
         <option value="">所有类型</option>
         <option value="interview">访谈</option>
@@ -26,14 +32,16 @@ permalink: /resources/  # 确保有斜杠
 <!-- 资料列表 -->
 <div id="resource-list">
 {% for resource in site.data.resources %}
-<div class="resource-item" data-series="{{ resource.series | first }}" data-type="{{ resource.type }}">
-    <h3>{{ resource.title }}</h3>
-    <p><strong>来源:</strong> {{ resource.source }} | <strong>日期:</strong> {{ resource.publish_date }}</p>
-    {% if resource.excerpt %}
-    <p>{{ resource.excerpt }}</p>
-    {% endif %}
-    <a href="{{ resource.original_link }}" target="_blank" class="btn">查看原文</a>
-    <hr>
+<div class="resource-container" data-series="{{ resource.series | join: ',' }}" data-type="{{ resource.type }}">
+    <div class="resource-item">
+        <h3>{{ resource.title }}</h3>
+        <p><strong>来源:</strong> {{ resource.source }} | <strong>日期:</strong> {{ resource.publish_date }}</p>
+        {% if resource.excerpt %}
+        <p>{{ resource.excerpt }}</p>
+        {% endif %}
+        <a href="{{ resource.original_link }}" target="_blank" class="btn">查看原文</a>
+    </div>
+    {% unless forloop.last %}<hr>{% endunless %}
 </div>
 {% endfor %}
 </div>
@@ -47,13 +55,33 @@ document.addEventListener('DOMContentLoaded', function() {
     function filterResources() {
         const seriesValue = seriesFilter.value;
         const typeValue = typeFilter.value;
-        const items = document.querySelectorAll('.resource-item');
+        const containers = document.querySelectorAll('.resource-container');
+        let visibleCount = 0;
         
-        items.forEach(item => {
-            const seriesMatch = !seriesValue || item.dataset.series === seriesValue;
-            const typeMatch = !typeValue || item.dataset.type === typeValue;
+        containers.forEach(container => {
+            const seriesData = container.dataset.series.split(',');
+            const typeMatch = !typeValue || container.dataset.type === typeValue;
+            const seriesMatch = !seriesValue || seriesData.includes(seriesValue);
             
-            item.style.display = seriesMatch && typeMatch ? 'block' : 'none';
+            const isVisible = seriesMatch && typeMatch;
+            
+            container.style.display = isVisible ? 'block' : 'none';
+            
+            if (isVisible) {
+                visibleCount++;
+            }
+        });
+        
+        // 隐藏最后一个容器的分隔线
+        const visibleContainers = Array.from(containers).filter(container => 
+            container.style.display !== 'none'
+        );
+        
+        visibleContainers.forEach((container, index) => {
+            const hr = container.querySelector('hr');
+            if (hr) {
+                hr.style.display = index === visibleContainers.length - 1 ? 'none' : 'block';
+            }
         });
     }
     

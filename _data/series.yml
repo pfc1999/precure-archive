@@ -4,14 +4,134 @@
   color: "#FF6B9D"
   description: "初代Precure，光明与黑暗的战斗"
 
+- id: "max_heart"
+  title: "ふたりはプリキュア Max Heart"
+  year: 2005
+  color: "#FF9E6D"
+  description: "初代续作，与女王的光辉并肩作战"
+
+- id: "splash_star"
+  title: "ふたりはプリキュア Splash Star"
+  year: 2006
+  color: "#6BFF9D"
+  description: "第二代Precure，自然元素的力量"
+
 - id: "yes_precure_5"
   title: "Yes! プリキュア5"
   year: 2007
   color: "#FF9E6D"
   description: "第三代Precure，梦想与希望的主题"
 
+- id: "yes_gogo"
+  title: "Yes! プリキュア5 GoGo!"
+  year: 2008
+  color: "#9E6DFF"
+  description: "第三代续作，与精灵王国的冒险"
+
+- id: "fresh"
+  title: "フレッシュプリキュア!"
+  year: 2009
+  color: "#FF6B9D"
+  description: "第四代Precure，舞蹈与爱情的故事"
+
 - id: "heartcatch"
   title: "ハートキャッチプリキュア!"
   year: 2010
-  color: "#FF6B9D" 
+  color: "#FF6B9D"
   description: "第五代Precure，时尚与花朵的主题"
+
+- id: "suite"
+  title: "スイートプリキュア♪"
+  year: 2011
+  color: "#9E6DFF"
+  description: "第六代Precure，音乐与旋律的力量"
+
+- id: "smile"
+  title: "スマイルプリキュア!"
+  year: 2012
+  color: "#FFD76B"
+  description: "第七代Precure，童话与笑容的物语"
+
+- id: "dokidoki"
+  title: "ドキドキ! プリキュア"
+  year: 2013
+  color: "#FF6B6B"
+  description: "第八代Precure，爱情与心跳的冒险"
+
+- id: "happiness_charge"
+  title: "ハピネスチャージプリキュア!"
+  year: 2014
+  color: "#FF6B9D"
+  description: "第九代Precure，全球Precure的大集结"
+
+- id: "go_princess"
+  title: "Go! プリンセスプリキュア"
+  year: 2015
+  color: "#9E6DFF"
+  description: "第十代Precure，公主与梦想的成长"
+
+- id: "maho_girls"
+  title: "魔法つかいプリキュア!"
+  year: 2016
+  color: "#9E6DFF"
+  description: "第十一代Precure，魔法学校的日常"
+
+- id: "kirakira"
+  title: "キラキラ☆プリキュアアラモード"
+  year: 2017
+  color: "#FFD76B"
+  description: "第十二代Precure，甜点与闪耀的主题"
+
+- id: "hugtto"
+  title: "HUGっと! プリキュア"
+  year: 2018
+  color: "#FF6B9D"
+  description: "第十三代Precure，未来与婴儿的奇迹"
+
+- id: "star_twinkle"
+  title: "スター☆トゥインクルプリキュア"
+  year: 2019
+  color: "#6B9DFF"
+  description: "第十四代Precure，宇宙与星座的浪漫"
+
+- id: "healin_good"
+  title: "ヒーリングっど♥プリキュア"
+  year: 2020
+  color: "#6BFF9D"
+  description: "第十五代Precure，自然与治愈的能量"
+
+- id: "tropical_rouge"
+  title: "トロピカル〜ジュ! プリキュア"
+  year: 2021
+  color: "#FF6B6B"
+  description: "第十六代Precure，南国与人鱼的活力"
+
+- id: "delicious_party"
+  title: "デリシャスパーティ♡プリキュア"
+  year: 2022
+  color: "#FF6B9D"
+  description: "第十七代Precure，美食与幸福的盛宴"
+
+- id: "hirogaru_sky"
+  title: "ひろがるスカイ! プリキュア"
+  year: 2023
+  color: "#6B9DFF"
+  description: "第十八代Precure，天空与英雄的物语"
+
+- id: "wonderful"
+  title: "わんだふるぷりきゅあ!"
+  year: 2024
+  color: "#6BFF9D"
+  description: "第十九代Precure，动物与友情的冒险"
+
+- id: "you_and_idol"
+  title: "キミとアイドルプリキュア♪"
+  year: 2025
+  color: "#FF6B9D"
+  description: "第二十代Precure，偶像与闪亮的主题"
+
+- id: "detective" 
+  title: "名探偵プリキュア！"
+  year: 2026
+  color: "#8A2BE2"
+  description: "第二十一代Precure，侦探与解谜的物语"
