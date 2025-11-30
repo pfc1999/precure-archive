@@ -1,0 +1,21 @@
+- id: "resource_001"
+  title: "「Yes! プリキュア5」夢原のぞみ役・三瓶由布子さんインタビュー"
+  series: ["yes_precure_5"]
+  type: "interview"
+  source: "アニメイトタイムズ"
+  publish_date: "2023-05-15"
+  original_link: "https://www.animatetimes.com/news/details.php?id=1684112400"
+  language: "ja"
+  tags: ["声優", "主演", "夢原のぞみ"]
+  excerpt: "三瓶由布子さんが夢原のぞみ役としての思い出を語る"
+
+- id: "resource_002" 
+  title: "プリキュア映画版設定資料集"
+  series: ["futari_wa", "yes_precure_5"]
+  type: "artbook"
+  source: "東映アニメーション"
+  publish_date: "2022-12-10"
+  original_link: "https://www.toei-anim.co.jp/"
+  language: "ja"
+  tags: ["設定資料", "映画", "作画"]
+  excerpt: "劇場版プリキュアの設定画やコンセプトアートを収録"

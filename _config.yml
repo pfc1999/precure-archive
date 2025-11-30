@@ -1,0 +1,16 @@
+title: "Precure资料索引库"
+description: "光之美少女系列资料整理与索引"
+baseurl: ""
+url: "https://你的用户名.github.io/precure-archive"
+
+theme: jekyll-theme-cayman
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+defaults:
+  - scope:
+      path: "_pages"
+    values:
+      layout: "default"
