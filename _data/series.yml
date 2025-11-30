@@ -1,0 +1,17 @@
+- id: "futari_wa"
+  title: "ふたりはプリキュア"
+  year: 2004
+  color: "#FF6B9D"
+  description: "初代Precure，光明与黑暗的战斗"
+
+- id: "yes_precure_5"
+  title: "Yes! プリキュア5"
+  year: 2007
+  color: "#FF9E6D"
+  description: "第三代Precure，梦想与希望的主题"
+
+- id: "heartcatch"
+  title: "ハートキャッチプリキュア!"
+  year: 2010
+  color: "#FF6B9D" 
+  description: "第五代Precure，时尚与花朵的主题"
