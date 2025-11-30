@@ -10,15 +10,33 @@ permalink: /resources/  # 确保有斜杠
 <div class="filters">
     <select id="series-filter">
         <option value="">所有系列</option>
-        {% assign all_series = "" | split: "" %}
+        {% assign all_series_ids = "" | split: "" %}
         {% for resource in site.data.resources %}
           {% for series_item in resource.series %}
-            {% assign all_series = all_series | push: series_item %}
+            {% assign all_series_ids = all_series_ids | push: series_item %}
           {% endfor %}
         {% endfor %}
-        {% assign unique_series = all_series | uniq | sort %}
-        {% for series in unique_series %}
-        <option value="{{ series }}">{{ series }}</option>
+        {% assign unique_series_ids = all_series_ids | uniq %}
+        
+        {% comment %} 创建包含年份信息的系列数组 {% endcomment %}
+        {% assign series_with_years = "" | split: "" %}
+        {% for series_id in unique_series_ids %}
+          {% assign series_info = site.data.series | where: "id", series_id | first %}
+          {% if series_info %}
+            {% capture series_data %}{{ series_info.year }}|{{ series_id }}|{{ series_info.title }}{% endcapture %}
+            {% assign series_with_years = series_with_years | push: series_data %}
+          {% endif %}
+        {% endfor %}
+        
+        {% comment %} 按年份排序 {% endcomment %}
+        {% assign sorted_series = series_with_years | sort %}
+        
+        {% comment %} 生成排序后的选项 {% endcomment %}
+        {% for series_data in sorted_series %}
+          {% assign parts = series_data | split: "|" %}
+          {% assign series_id = parts[1] %}
+          {% assign series_title = parts[2] %}
+          <option value="{{ series_id }}">{{ series_title }}</option>
         {% endfor %}
     </select>
     <select id="type-filter">
